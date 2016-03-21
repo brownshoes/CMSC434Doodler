@@ -1,0 +1,167 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal" >
+
+
+        <ImageButton
+            android:id="@+id/Black"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="2dp"
+            android:background="@android:color/black"/>
+
+        <ImageButton
+            android:id="@+id/Red"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="2dp"
+            android:background="#FFFF0000"/>
+
+        <ImageButton
+            android:id="@+id/Yellow"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="2dp"
+            android:background="#FFFFCC00"/>
+
+        <ImageButton
+            android:id="@+id/Green"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="2dp"
+            android:background="#FF009900"/>
+
+        <ImageButton
+            android:id="@+id/Magenta"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="2dp"
+            android:background="#FFFF00FF"/>
+
+        <ImageButton
+            android:id="@+id/Cyan"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="2dp"
+            android:background="#FF00FFFF"/>
+
+        <ImageButton
+            android:id="@+id/Blue"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="2dp"
+            android:background="#FF0000FF"/>
+
+        <ImageButton
+            android:id="@+id/White"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="2dp"
+            android:background="#FFFFFFFF"/>
+
+    </LinearLayout>
+
+
+
+    <com.example.me.cmsc434doodler.DoodleView
+
+        android:id="@+id/doodle"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="1"
+        android:background="#FFFFFFFF"
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Brush Size"
+            android:id="@+id/textView"
+            android:layout_gravity="left|center_horizontal"
+            android:singleLine="true" />
+
+        <SeekBar
+            android:id="@+id/sizeSeek"
+            android:layout_width="382dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:max="50"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Opacity"
+            android:id="@+id/textView2"
+            android:layout_gravity="left|center_horizontal" />
+
+
+
+        <SeekBar
+            android:id ="@+id/opacity"
+            android:layout_width="382dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:max="255"/>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/undo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Undo"
+                android:layout_margin="5dp"/>
+
+            <Button
+                android:id="@+id/redo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Redo"
+                android:layout_margin="5dp"/>
+
+            <Button
+                android:id="@+id/clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clear"
+                android:layout_margin="5dp"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
