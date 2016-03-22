@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
-import android.widget.Toast;
 
 import java.lang.Math;
 
@@ -25,12 +24,11 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton blue;
     private ImageButton magenta;
     private ImageButton cyan;
-    private ImageButton white;
 
 
-    private Button undoButton;
-    private Button clearButton;
-    private Button redoButton;
+    private ImageButton undoButton;
+    private ImageButton clearButton;
+    private ImageButton redoButton;
 
     private SeekBar sizeStroke;
     private SeekBar opacity;
@@ -53,9 +51,9 @@ public class MainActivity extends AppCompatActivity {
         cyan = (ImageButton) findViewById(R.id.Cyan);
         magenta = (ImageButton) findViewById(R.id.Magenta);
 
-        undoButton = (Button) findViewById(R.id.undo);
-        redoButton = (Button) findViewById(R.id.redo);
-        clearButton = (Button) findViewById(R.id.clear);
+        undoButton = (ImageButton) findViewById(R.id.undo);
+        redoButton = (ImageButton) findViewById(R.id.redo);
+        clearButton = (ImageButton) findViewById(R.id.clear);
 
         sizeStroke = (SeekBar) findViewById(R.id.sizeSeek);
         opacity = (SeekBar) findViewById(R.id.opacity);

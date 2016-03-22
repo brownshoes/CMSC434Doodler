@@ -127,28 +127,43 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
 
-            <Button
+            android:background="#0000">
+
+
+            <ImageButton
                 android:id="@+id/undo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Undo"
-                android:layout_margin="5dp"/>
+                android:background="#0000"
+                android:layout_marginLeft="20dp"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:src="@drawable/undo"/>
 
-            <Button
+            <ImageButton
                 android:id="@+id/redo"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Redo"
-                android:layout_margin="5dp"/>
+                android:layout_height="fill_parent"
+                android:background="#0000"
+                android:layout_marginLeft="20dp"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:src="@drawable/redo"/>
 
-            <Button
+            <ImageButton
                 android:id="@+id/clear"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Clear"
-                android:layout_margin="5dp"/>
+                android:layout_height="fill_parent"
+                android:background="#0000"
+                android:layout_marginLeft="100dp"
+
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:src="@drawable/reset_icon"/>
+
+
 
 
         </LinearLayout>
