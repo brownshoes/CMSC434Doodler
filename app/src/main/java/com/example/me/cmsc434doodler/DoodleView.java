@@ -9,6 +9,7 @@ import android.graphics.Path;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -45,11 +46,7 @@ public class DoodleView extends View {
     //defaults
     private int currentColor = Color.BLACK;
     private float currentStroke = 4;
-    private int currentAlpha = 30;
-
-    private Bitmap canvasBitmap;
-    //private Canvas drawCanvas;
-    //private Paint canvasPaint = new Paint(Paint.DITHER_FLAG);;
+    private int currentAlpha = 255;
 
     public DoodleView(Context context) {
         super(context);
@@ -67,6 +64,10 @@ public class DoodleView extends View {
     }
 
     private void init(AttributeSet attrs, int defStyleAttr){
+
+        paintDoodle.setStrokeWidth(currentStroke);
+        paintDoodle.setAlpha(currentAlpha);
+
         paintDoodle.setColor(currentColor);
         paintDoodle.setStyle(Paint.Style.STROKE);
     }
@@ -90,6 +91,8 @@ public class DoodleView extends View {
         invalidate();
         currentAlpha = alpha;
         paintDoodle.setAlpha(alpha);
+
+
     }
 
     public void undo(){
@@ -135,6 +138,12 @@ public class DoodleView extends View {
 
         //int length = store.size();
 
+        paintDoodle.setStrokeWidth(currentStroke);
+        paintDoodle.setColor(currentColor);
+        paintDoodle.setAlpha(currentAlpha);
+
+        canvas.drawPath(paintPath, paintDoodle);
+
         //for(int count = 0; count < length; count++){
         for(int count = 0; count < element; count++){
 
@@ -150,10 +159,7 @@ public class DoodleView extends View {
 
         }
 
-        paintDoodle.setStrokeWidth(currentStroke);
-        paintDoodle.setAlpha(currentAlpha);
-        paintDoodle.setColor(currentColor);
-        canvas.drawPath(paintPath, paintDoodle);
+
     }
 
     @Override

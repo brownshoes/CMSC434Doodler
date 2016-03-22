@@ -9,12 +9,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
+import android.widget.Toast;
+
+import java.lang.Math;
 
 public class MainActivity extends AppCompatActivity {
 
-
-
-    private int colorCount = 0;
     private DoodleView doodleView;
 
     private ImageButton black;
@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
         blue = (ImageButton) findViewById(R.id.Blue);
         cyan = (ImageButton) findViewById(R.id.Cyan);
         magenta = (ImageButton) findViewById(R.id.Magenta);
-        white = (ImageButton) findViewById(R.id.White);
 
         undoButton = (Button) findViewById(R.id.undo);
         redoButton = (Button) findViewById(R.id.redo);
@@ -76,8 +75,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
 
-                doodleView.changeAlpha(value);
-
+                doodleView.changeAlpha(Math.abs(value - 255));
             }
         });
 
@@ -195,40 +193,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        white.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                doodleView.changeColor(Color.WHITE);
-
-            }
-        });
 
     }
-/*
-    //user clicked paint
-    public void paintClicked(View view){
-        //use chosen color
-        if(view!=currPaint){
-
-            String color = view.getTag().toString();
-            doodleView.changeColor(color);
-
-        }
-    }
-*/
-
-
-
-
-
-
-
-
-
-
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

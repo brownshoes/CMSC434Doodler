@@ -61,13 +61,6 @@
             android:layout_margin="2dp"
             android:background="#FF0000FF"/>
 
-        <ImageButton
-            android:id="@+id/White"
-            android:layout_width="50dp"
-            android:layout_height="fill_parent"
-            android:layout_margin="2dp"
-            android:background="#FFFFFFFF"/>
-
     </LinearLayout>
 
 
