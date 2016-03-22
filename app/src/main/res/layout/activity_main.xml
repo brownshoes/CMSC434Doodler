@@ -7,63 +7,126 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="20dp"
         android:layout_gravity="center"
         android:orientation="horizontal" >
 
 
         <ImageButton
             android:id="@+id/Black"
-            android:layout_width="50dp"
+            android:layout_width="40dp"
             android:layout_height="fill_parent"
             android:layout_margin="2dp"
             android:background="@android:color/black"/>
 
         <ImageButton
             android:id="@+id/Red"
-            android:layout_width="50dp"
+            android:layout_width="40dp"
             android:layout_height="fill_parent"
             android:layout_margin="2dp"
             android:background="#FFFF0000"/>
 
         <ImageButton
             android:id="@+id/Yellow"
-            android:layout_width="50dp"
+            android:layout_width="40dp"
             android:layout_height="fill_parent"
             android:layout_margin="2dp"
             android:background="#FFFFCC00"/>
 
         <ImageButton
             android:id="@+id/Green"
-            android:layout_width="50dp"
+            android:layout_width="40dp"
             android:layout_height="fill_parent"
             android:layout_margin="2dp"
             android:background="#FF009900"/>
 
         <ImageButton
             android:id="@+id/Magenta"
-            android:layout_width="50dp"
+            android:layout_width="40dp"
             android:layout_height="fill_parent"
             android:layout_margin="2dp"
             android:background="#FFFF00FF"/>
 
         <ImageButton
             android:id="@+id/Cyan"
-            android:layout_width="50dp"
+            android:layout_width="40dp"
             android:layout_height="fill_parent"
             android:layout_margin="2dp"
             android:background="#FF00FFFF"/>
 
         <ImageButton
             android:id="@+id/Blue"
-            android:layout_width="50dp"
+            android:layout_width="40dp"
             android:layout_height="fill_parent"
             android:layout_margin="2dp"
             android:background="#FF0000FF"/>
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal" >
 
+        <ImageButton
+            android:id="@+id/one"
+            android:layout_width="40dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="2dp"
+            android:background="#FF44FF"
+            android:tag="#FF44FF"/>
+
+        <ImageButton
+            android:id="@+id/two"
+            android:layout_width="40dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="2dp"
+            android:background="#FF8888"
+            android:tag="#FF8888"/>
+
+        <ImageButton
+            android:id="@+id/three"
+            android:layout_width="40dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="2dp"
+            android:background="#FF1212"
+            android:tag="#FF1212"/>
+
+        <ImageButton
+            android:id="@+id/four"
+            android:layout_width="40dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="2dp"
+            android:background="#FF660000"
+            android:tag="#FF660000"/>
+
+        <ImageButton
+            android:id="@+id/five"
+            android:layout_width="40dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="2dp"
+            android:background="#FF787878"
+            android:tag="#FF787878"/>
+
+        <ImageButton
+            android:id="@+id/six"
+            android:layout_width="40dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="2dp"
+            android:background="#FFFF6666"
+            android:tag="#FFFF6666"/>
+
+        <ImageButton
+            android:id="@+id/seven"
+            android:layout_width="40dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="2dp"
+            android:background="#FF990099"
+            android:tag="#FF990099"/>
+
+
+    </LinearLayout>
 
     <com.example.me.cmsc434doodler.DoodleView
 
@@ -130,7 +193,11 @@
             android:orientation="horizontal"
 
             android:background="#0000">
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Undo/Redo" />
 
             <ImageButton
                 android:id="@+id/undo"
@@ -141,6 +208,8 @@
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
                 android:src="@drawable/undo"/>
+
+
 
             <ImageButton
                 android:id="@+id/redo"
@@ -157,7 +226,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:background="#0000"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="75dp"
 
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"

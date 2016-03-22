@@ -25,6 +25,14 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton magenta;
     private ImageButton cyan;
 
+    private ImageButton one;
+    private ImageButton two;
+    private ImageButton three;
+    private ImageButton four;
+    private ImageButton five;
+    private ImageButton six;
+    private ImageButton seven;
+
 
     private ImageButton undoButton;
     private ImageButton clearButton;
@@ -42,14 +50,24 @@ public class MainActivity extends AppCompatActivity {
 
         doodleView = (DoodleView)findViewById(R.id.doodle);
 
+        //row one
         black = (ImageButton) findViewById(R.id.Black);
         red = (ImageButton) findViewById(R.id.Red);
         yellow = (ImageButton) findViewById(R.id.Yellow);
         green = (ImageButton) findViewById(R.id.Green);
-
         blue = (ImageButton) findViewById(R.id.Blue);
         cyan = (ImageButton) findViewById(R.id.Cyan);
         magenta = (ImageButton) findViewById(R.id.Magenta);
+
+        //row two
+        one = (ImageButton) findViewById(R.id.one);
+        two = (ImageButton) findViewById(R.id.two);
+        three = (ImageButton) findViewById(R.id.three);
+        four = (ImageButton) findViewById(R.id.four);
+        five = (ImageButton) findViewById(R.id.five);
+        six  = (ImageButton) findViewById(R.id.six);
+        seven = (ImageButton) findViewById(R.id.seven);
+
 
         undoButton = (ImageButton) findViewById(R.id.undo);
         redoButton = (ImageButton) findViewById(R.id.redo);
@@ -118,6 +136,86 @@ public class MainActivity extends AppCompatActivity {
                 doodleView.redo();
             }
         });
+
+
+        one.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                int color = Color.parseColor("#FF44FF");
+
+                doodleView.changeColor(color);
+
+            }
+        });
+
+        two.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                int color = Color.parseColor("#FF8888");
+
+                doodleView.changeColor(color);
+
+            }
+        });
+
+         three.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                int color = Color.parseColor("#FF1212");
+
+                doodleView.changeColor(color);
+
+            }
+        });
+
+        four.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                int color = Color.parseColor("#FF660000");
+
+                doodleView.changeColor(color);
+
+            }
+        });
+
+        five.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                int color = Color.parseColor("#FF787878");
+
+                doodleView.changeColor(color);
+
+            }
+        });
+
+        six.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                int color = Color.parseColor("#FFFF6666");
+
+                doodleView.changeColor(color);
+
+            }
+        });
+
+        seven.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                int color = Color.parseColor("#FF990099");
+
+                doodleView.changeColor(color);
+
+            }
+        });
+
+
 
         red.setOnClickListener(new View.OnClickListener() {
             @Override
